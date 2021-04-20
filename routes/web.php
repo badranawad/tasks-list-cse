@@ -17,13 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function(){
+Route::get('/about', function () {
     $name = request('name');
     return view('about', compact('name'));
 });
 
-Route::post('/store', function(){
+Route::post('/store', function () {
     $name = request('name');
     return view('about', compact('name'));
 });
 
+Route::get('tasks', function () {
+    return view('tasks');
+});
